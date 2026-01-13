@@ -1,0 +1,56 @@
+/* Contenedor principal del botón */
+div[id] {
+    width: 140px;
+    height: 160px;
+    background: linear-gradient(145deg, #3c414b50, #ffffff);
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    margin: 25px;
+}
+
+/* Efecto hover */
+div[id]:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Contenedor de la imagen */
+.button-image {
+    width: 64px;
+    height: 64px;
+    background-color: #eef3ff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+    background-color: grey;
+}
+
+/* Imagen del icono */
+.button-image img {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+}
+
+/* Texto del botón */
+.button-text {
+    font-size: 15px;
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+    margin: 0;
+    padding: 0 10px;
+}
+
+/* Efecto al presionar */
+div[id]:active {
+    transform: scale(0.97);
+}
