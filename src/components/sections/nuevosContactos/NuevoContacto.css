@@ -1,0 +1,53 @@
+/* Contenedor principal */
+.nuevoContacto-padre {
+    width: 100%;
+    max-width: 360px;
+    margin: 20px auto;
+    padding: 20px 24px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Título */
+.nuevoContacto-titulo {
+    margin: 0;
+    text-align: center;
+    font-size: 20px;
+    color: #333;
+    font-weight: 600;
+}
+
+/* Inputs */
+.name-input,
+.telefono-input {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Placeholder */
+.name-input::placeholder,
+.telefono-input::placeholder {
+    color: #999;
+}
+
+/* Focus */
+.name-input:focus,
+.telefono-input:focus {
+    border-color: #4f46e5;
+    box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.2);
+}
+
+/* Opcional: fondo general */
+body {
+    background-color: #f3f4f6;
+}
