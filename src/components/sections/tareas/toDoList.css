@@ -27,3 +27,34 @@
     margin-bottom: 16px;
     font-weight: 600;
 }
+
+.tareas h3{
+    color: var(--text-primary);
+    font-size: 10px;
+    margin-bottom: 16px;
+    font-weight: 600;
+}
+
+.label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 12px;
+    gap: 12px;
+    border-bottom: 1px solid var(--border);
+}
+
+.label h3 {
+    flex: 1;
+    text-align: center;
+    margin: 0;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    white-space: nowrap;
+}
+
+.label h3:nth-child(2) {
+    flex: 5;
+    text-align: left;
+}
