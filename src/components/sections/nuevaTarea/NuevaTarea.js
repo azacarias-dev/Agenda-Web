@@ -12,6 +12,9 @@ let NuevaTarea = () => {
     inputNombre.type = "text";
     inputNombre.placeholder = "Descripcion de la tarea";
 
+    let inputFecha = document.createElement("input");
+    inputFecha.type = "date";
+
     let inputPrioridad = document.createElement("input");
     inputPrioridad.type = "text";
     inputPrioridad.placeholder = "Prioridad";
@@ -26,6 +29,7 @@ let NuevaTarea = () => {
 
     nuevaTareaForm.appendChild(h3);
     nuevaTareaForm.appendChild(inputNombre);
+    nuevaTareaForm.appendChild(inputFecha);
     nuevaTareaForm.appendChild(inputPrioridad);
     nuevaTareaForm.appendChild(btnSubmit);
     nuevaTareaForm.appendChild(btnCancel);
@@ -38,6 +42,7 @@ let NuevaTarea = () => {
         let nuevaTarea = {
             estado: false,
             nombre: inputNombre.value,
+            fecha: inputFecha.value,
             prioridad: inputPrioridad.value
         };
 
@@ -46,6 +51,7 @@ let NuevaTarea = () => {
         TareaList.push(nuevaTarea);
         guardarTareas();
         inputNombre.value = "";
+        inputFecha.value = "";
         inputPrioridad.value = "";
     });
 
