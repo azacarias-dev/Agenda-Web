@@ -11,19 +11,19 @@
     --border: #475569;
 }
 
-.div-padre{
+.tareas{
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0;
     display: flex;
+    flex-direction: column;
     gap: 12px;
-    padding: 16px;
-    background: var(--surface);
-    border-radius: 12px;
 }
 
-.div-hija1,
-.div-hija2{
-    height: 50px;
-    width: 50px;
-    border-radius: 8px;
-    background: linear-gradient(135deg, var(--primary), var(--secondary));
-    border: none;
+.tareas h2 {
+    color: var(--text-primary);
+    font-size: 24px;
+    margin-bottom: 16px;
+    font-weight: 600;
 }

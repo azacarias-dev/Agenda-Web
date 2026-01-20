@@ -18,6 +18,10 @@ let login = function(){
     let button = document.createElement("button");
     button.innerHTML = 'Iniciar Sesion';
 
+    button.addEventListener('click', function(){
+        window.location.href = "./src/app.html";
+    });
+
     login.appendChild(h3);
     login.appendChild(user);
     login.appendChild(password);
