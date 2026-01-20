@@ -11,7 +11,7 @@
     --border: #475569;
 }
 
-.item_tarea{
+.item_tarea {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 1rem;
     border: 1px solid var(--border);
@@ -19,12 +19,14 @@
     background: linear-gradient(135deg, var(--surface-light), var(--surface));
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: auto 1fr auto auto auto;
+    align-items: center;
     gap: 16px;
     padding: 16px;
     transition: all 0.3s ease;
     color: var(--text-primary);
 }
+
 
 .item_tarea:hover {
     border-color: var(--primary);
@@ -47,3 +49,28 @@
     background: #db2777;
     transform: translateY(-2px);
 }
+
+.btn-eliminar {
+    background: var(--accent);
+    border: none;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.75rem;
+    min-width: 50px;
+    text-align: center;
+    transition: all 0.2s ease;
+}
+
+.btn-eliminar:hover {
+    background: #db2777;
+    box-shadow: 0 4px 12px rgba(236, 72, 153, 0.4);
+    transform: translateY(-1px);
+}
+
+.btn-eliminar:active {
+    transform: scale(0.95);
+}
+
