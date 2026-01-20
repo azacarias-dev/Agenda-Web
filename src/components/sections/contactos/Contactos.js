@@ -13,9 +13,6 @@ let Contactos = () => {
         sectionContactos.appendChild(itemContacto("account.svg", 
             contact.nombre, contact.telefono));
         });
-
-
-    sectionContactos.appendChild(itemContacto("account.svg","Alessandro Zacarias","55854521"));
     
         return sectionContactos;
     }

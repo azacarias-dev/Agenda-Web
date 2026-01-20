@@ -1,56 +1,76 @@
-/* Contenedor principal del botón */
+:root {
+    --primary: #6366f1;
+    --primary-dark: #4f46e5;
+    --secondary: #8b5cf6;
+    --accent: #ec4899;
+    --background: #0f172a;
+    --surface: #1e293b;
+    --surface-light: #334155;
+    --text-primary: #f1f5f9;
+    --text-secondary: #cbd5e1;
+    --border: #475569;
+}
+
 div[id] {
-    width: 140px;
-    height: 160px;
-    background: linear-gradient(145deg, #3c414b50, #ffffff);
-    border-radius: 16px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    width: 120px;
+    height: 140px;
+    background: linear-gradient(135deg, var(--surface-light), var(--surface));
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(99, 102, 241, 0.1);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-    margin: 25px;
+    transition: all 0.3s ease;
+    margin: 8px auto;
 }
 
-/* Efecto hover */
 div[id]:hover {
-    transform: translateY(-6px) scale(1.03);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    transform: translateY(-8px);
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    box-shadow: 0 12px 32px rgba(99, 102, 241, 0.3);
+    border-color: var(--primary);
 }
 
-/* Contenedor de la imagen */
 .button-image {
     width: 64px;
     height: 64px;
-    background-color: #eef3ff;
+    background-color: rgba(99, 102, 241, 0.2);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 12px;
-    background-color: grey;
+    transition: background-color 0.3s ease;
 }
 
-/* Imagen del icono */
+div[id]:hover .button-image {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
 .button-image img {
-    width: 36px;
-    height: 36px;
+    width: 32px;
+    height: 32px;
     object-fit: contain;
+    filter: brightness(0) saturate(100%) invert(92%) sepia(12%) saturate(1197%) hue-rotate(201deg) brightness(105%) contrast(101%);
 }
 
-/* Texto del botón */
 .button-text {
-    font-size: 15px;
+    font-size: 13px;
     font-weight: 600;
-    color: #333;
+    color: var(--text-primary);
     text-align: center;
     margin: 0;
-    padding: 0 10px;
+    padding: 0 8px;
+    transition: color 0.3s ease;
 }
 
-/* Efecto al presionar */
+div[id]:hover .button-text {
+    color: #ffffff;
+}
+
 div[id]:active {
-    transform: scale(0.97);
+    transform: scale(0.95);
 }

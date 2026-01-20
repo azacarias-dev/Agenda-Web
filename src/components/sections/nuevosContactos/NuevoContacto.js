@@ -1,4 +1,4 @@
-import { ContactList } from "../contactos/db.js";
+import { ContactList, guardarContactos} from "../contactos/db.js";
 
 let nuevoContacto = () => {
     let nuevoContacto = document.createElement("form");
@@ -6,7 +6,7 @@ let nuevoContacto = () => {
 
     let h3 = document.createElement("h3");
     h3.className = "nuevoContacto-titulo";
-    h3.innerHTML = "nuevoContacto";
+    h3.innerHTML = "Nuevo Contacto";
 
     let userName = document.createElement("input");
     userName.className = "name-input";
@@ -36,13 +36,21 @@ let nuevoContacto = () => {
 
     nuevoContacto.addEventListener("submit", (e) => {
         e.preventDefault();
+
+        if (!userName.value || !telefono.value) return;
+
         let contacto = {
             nombre: userName.value,
             telefono: telefono.value
         };
 
         console.log(contacto);
+        alert("Contacto agregado con exito");
         ContactList.push(contacto);
+        guardarContactos();
+        userName.value = "";
+        telefono.value = "";
+
     });
 
     return nuevoContacto;

@@ -11,7 +11,7 @@
     --border: #475569;
 }
 
-.item-contacto{
+.item_tarea{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 1rem;
     border: 1px solid var(--border);
@@ -26,13 +26,13 @@
     color: var(--text-primary);
 }
 
-.item-contacto:hover {
+.item_tarea:hover {
     border-color: var(--primary);
     box-shadow: 0 4px 16px rgba(99, 102, 241, 0.15);
     background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(139, 92, 246, 0.1));
 }
 
-.item-contacto button {
+.item_tarea button {
     background: var(--accent);
     border: none;
     color: white;
@@ -43,7 +43,7 @@
     transition: all 0.2s ease;
 }
 
-.item-contacto button:hover {
+.item_tarea button:hover {
     background: #db2777;
     transform: translateY(-2px);
 }
